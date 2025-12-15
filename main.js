@@ -1,25 +1,19 @@
 let slideIndex = 1;
 let slideTimeout;
 
-// Initial display setup and start the automatic timer
+// Initial setup
 showSlides(slideIndex);
 startAutoSlide();
 
-// Next/previous controls
 function plusSlides(n) {
-    // Clear the current timeout when a user manually clicks
     clearTimeout(slideTimeout); 
     showSlides(slideIndex += n);
-    // Restart the timer after a manual click
     startAutoSlide();
 }
 
-// Thumbnail image controls (clickable dots)
 function currentSlide(n) {
-    // Clear the current timeout when a user manually clicks a dot
     clearTimeout(slideTimeout);
     showSlides(slideIndex = n);
-    // Restart the timer after click
     startAutoSlide();
 }
 
